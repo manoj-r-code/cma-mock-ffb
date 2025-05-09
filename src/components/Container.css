@@ -1,0 +1,39 @@
+/* App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* For small screens: stack vertically */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+
+  .sidebar-container {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .questions-container {
+    justify-content: center;
+  }
+
+  .submit-button {
+    margin-top: 10px;
+  }
+}
