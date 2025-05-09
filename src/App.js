@@ -84,6 +84,7 @@
 // }
 
 // export default App;
+
 import { useState, useEffect } from "react";
 import { questions } from "./data/questions";
 import Header from "./components/Header";
@@ -91,7 +92,7 @@ import QuestionPage from "./components/QuestionPage";
 import Controls from "./components/Controls";
 import Sidebar from "./components/SideBar";
 
-const TOTAL_TIME = 1 * 60; // 120 mins in seconds
+const TOTAL_TIME = 120 * 60; // 120 mins in seconds
 
 function App() {
   const [currentQ, setCurrentQ] = useState(0);
