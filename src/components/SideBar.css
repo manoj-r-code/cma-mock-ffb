@@ -1,0 +1,155 @@
+/* .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;  
+    height: 100%;
+    background-color: #232c3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 10;
+  }
+  
+  .question-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #232c3f;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .question-btn:hover {
+    background-color: #4a6dff;
+    color: #fff;
+  }
+  
+  .question-btn.🟩 {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .question-btn.🟣 {
+    background-color: #9c27b0;
+    color: #fff;
+  }
+  
+  .question-btn.🔴 {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .question-btn.🟢 {
+    background-color: #ff9800;
+    color: #fff;
+  }
+    */
+/* src/components/Sidebar.css */
+/* 
+.sidebar {
+  position: fixed;
+  left: 1100px;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  background-color: #232c3f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.question-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #232c3f;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.question-btn:hover {
+  background-color: #4a6dff;
+  color: #fff;
+}
+
+.question-btn.🟩 {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.question-btn.🟣 {
+  background-color: #9c27b0;
+  color: #fff;
+}
+
+.question-btn.🔴 {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.question-btn.🟢 {
+  background-color: #ff9800;
+  color: #fff;
+} */
+.question-btn {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .answered {
+    background-color: green;
+  }
+  
+  .not-answered {
+    background-color: red;
+  }
+  
+  .marked {
+    background-color: purple;
+  }
+  
+  .not-visited {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .answered-marked {
+    background-color: purple;
+    position: relative;
+  }
+  
+  .answered-marked::after {
+    content: '✔';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    color: white;
+  }
+  
