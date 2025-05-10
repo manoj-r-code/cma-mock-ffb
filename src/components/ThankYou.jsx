@@ -25,7 +25,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 const ThankYou = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  // const { score } = location.state || { score: 0 };
+  const { score, answers } = location.state || { score: 0, answers: [] };
 
   return (
     <div className="thankyou-page">
@@ -36,9 +37,13 @@ const ThankYou = () => {
         <h3>Your Score: {score} / 10</h3>
       </p>
 
-      <button className="home-button" onClick={() => navigate("/")}>
+      {/* <button className="home-button" onClick={() => navigate("/review")}>
         Back to Home
-      </button>
+      </button> */}
+      <button className="home-button" onClick={() => navigate("/review", { state: { answers } })}>
+  Review Your Answers
+</button>
+
     </div>
   );
 };

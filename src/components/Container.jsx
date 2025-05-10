@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { questions } from "../data/questions";
 import Header from "./Header";
@@ -62,37 +61,42 @@ function Container() {
     });
   };
 
-//   const handleSubmit = () => {
-//     const confirmSubmit = window.confirm("Are you sure you want to submit the test?");
-//     if (confirmSubmit) {
-//       console.log("✅ Test submitted!", answers);
-//       navigate("/thank-you"); // ✅ this works
-//     }
-//   };
-const handleSubmit = () => {
-    const confirmSubmit = window.confirm("Are you sure you want to submit the test?");
-    
+  //   const handleSubmit = () => {
+  //     const confirmSubmit = window.confirm("Are you sure you want to submit the test?");
+  //     if (confirmSubmit) {
+  //       console.log("✅ Test submitted!", answers);
+  //       navigate("/thank-you"); // ✅ this works
+  //     }
+  //   };
+  const handleSubmit = () => {
+    const confirmSubmit = window.confirm(
+      "Are you sure you want to submit the test?"
+    );
+
     if (confirmSubmit) {
       const score = answers.reduce((acc, answer, index) => {
         // Get the correct answer text from the question
         const correctAnswer = questions[index].correctAnswer;
-        const selectedOptionText = questions[index].options[answer.selectedOption]; // Get the selected option text from options array
-  
+        const selectedOptionText =
+          questions[index].options[answer.selectedOption]; // Get the selected option text from options array
+
         // Log for debugging
-        console.log(`Q${index + 1}: Selected Option = ${selectedOptionText}, Correct Answer = ${correctAnswer}`);
-  
+        console.log(
+          `Q${
+            index + 1
+          }: Selected Option = ${selectedOptionText}, Correct Answer = ${correctAnswer}`
+        );
+
         // Compare the selected option's text with the correct answer text
         const isCorrect = selectedOptionText === correctAnswer;
         return isCorrect ? acc + 1 : acc;
       }, 0);
-  
+
       console.log("✅ Test submitted! Your score is: ", score);
-      navigate("/thank-you", { state: { score } }); // Pass score to the next page
+      // navigate("/thank-you", { state: { score } }); // Pass score to the next page
+      navigate("/thank-you", { state: { score, answers } });
     }
   };
-  
-  
-
 
   // Function to save the answer and update status
   const saveAnswer = () => {
