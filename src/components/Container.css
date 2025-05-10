@@ -1,22 +1,21 @@
 /* App Container */
-.app {
+/* .app {
   display: flex;
   flex-direction: column;
 }
 
-/* Main Content Layout */
 .main-content {
   display: flex;
   flex-direction: row;
   gap: 20px;
   margin-top: 80px;
   padding: 20px;
-}
+} */
 
 /* For small screens: stack vertically */
 @media screen and (max-width: 768px) {
   .main-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 10px;
   }
 
