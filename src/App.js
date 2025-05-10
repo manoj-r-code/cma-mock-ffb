@@ -117,6 +117,7 @@ import { Routes, Route,Navigate } from "react-router-dom";
 import Container from "./components/Container";
 import Instructions from "./components/Instructions";
 import ThankYou from "./components/ThankYou";
+import ReviewPage from "./components/Reviewpage";
 
 function App() {
   return (
@@ -125,6 +126,8 @@ function App() {
         <Route path="/" element={<Instructions />} />
         <Route path="/test" element={<Container />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/review" element={<ReviewPage />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </main>
