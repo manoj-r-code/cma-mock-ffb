@@ -6,7 +6,7 @@ import Controls from "./Controls";
 import Sidebar from "./SideBar";
 import { useNavigate } from "react-router-dom";
 import "./Container.css"; // Optional CSS file for styling
-const TOTAL_TIME = 120 * 60; // 120 mins in seconds
+const TOTAL_TIME = 60 * 60; // 120 mins in seconds
 
 function Container() {
   const [currentQ, setCurrentQ] = useState(0);
@@ -14,7 +14,7 @@ function Container() {
   const navigate = useNavigate();
 
   const [answers, setAnswers] = useState(
-    Array(10)
+    Array(60)
       .fill()
       .map(() => ({
         selectedOption: null,

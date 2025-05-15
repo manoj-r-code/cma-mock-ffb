@@ -34,7 +34,7 @@ const ThankYou = () => {
 
       <p>
         Your responses have been recorded successfully.
-        <h3>Your Score: {score} / 10</h3>
+        <h3>Your Score: {score} / 60</h3>
       </p>
 
       {/* <button className="home-button" onClick={() => navigate("/review")}>
